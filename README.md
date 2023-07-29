@@ -5,12 +5,12 @@ Feito apenas por diversão após ver um amigo, jogando um jogo com uma mecânica
 
 ## Como abrir o jogo
 
-Basta baixar o arquivo Enigma.html e abri-lo no seu navegador.
+Acesse o site https://subtraia-me.vercel.app/
 
 ## Como jogar
 
 Trata-se de um jogo de subtração entre você e a máquina.
-Toda vez que você subtrair um valor, haverá uma pausa de 0.5s até a escolha da subtração da máquina e, mais 0.5s até que os botoes sejam reabilitados para que você possa subtrair novamente.
+Toda vez que você subtrair um valor, haverá uma pausa de 0.9s até a escolha da subtração da máquina e, mais 0.1s até que os botoes sejam reabilitados para que você possa subtrair novamente.
 Ganha aquele que subtrair à exatamente zero o valor apresentado na tela.
 
 ## Autor

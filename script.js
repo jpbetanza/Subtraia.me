@@ -16,14 +16,12 @@ function pingTitle(){
 
 //Gerar número inicial Entre 40 e 49, não divisível por 4
 function gerarNumero(){
-	a = parseInt(Math.random()*100)
-	while(a<40 || a>49){
-		a = parseInt(Math.random()*100)
-		if(a%4==0){
-			a = parseInt(Math.random()*100)
-		}
+	var a=4
+	while(a%4==0){
+		a = Math.floor(Math.random() * (50 - 40) + 40);
 	}
 	document.getElementById('numero').innerHTML = a
+	return a
 }
 
 function desabilitarbotoes(booleano){
@@ -79,5 +77,4 @@ async function subtraia(x){
 	}
 }
 
-var a
-gerarNumero()
+var a = gerarNumero()
