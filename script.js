@@ -45,19 +45,25 @@ async function enigma(){
 	var resto = a%4
 	if(resto==0){
 		var escolhas=[1,2,3]
-		a-=escolhas[Math.floor(Math.random() * escolhas.length)]
+		resto = escolhas[Math.floor(Math.random() * escolhas.length)]
+		a-=resto
 	}
 	else{
 		a-=resto
 	}
 	document.getElementById('numero').innerHTML = a
+	document.getElementById(resto).classList.add("animate-ping");
 
 	if(a==0){
+		await sleep(200)
 		perdeu()
+		document.getElementById(resto).classList.remove("animate-ping");
+		
 	}
 	else{
-		await sleep(100)
+		await sleep(200)
 		desabilitarbotoes(false)
+		document.getElementById(resto).classList.remove("animate-ping");
 	}
 }
 
@@ -67,12 +73,13 @@ async function subtraia(x){
 	a = a-x
 	document.getElementById('numero').innerHTML = a
 	pingTitle()
-	await sleep(900)
-	removePing()
 	if(a==0){
 		ganhou()
 	}
 	else{
+		delay = Math.floor(Math.random() * (900 - 500) + 500)
+		await sleep(delay)
+		removePing()
 		enigma()
 	}
 }
