@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Subtraia.me</title>
+    <script>
+        tailwind.config={
+            theme:{
+                extend:{
+                    fontFamily:{
+                        mround: ["M PLUS Rounded 1c", 'sans-serif'],
+                    },
+                    colors:{
+                        azul:{
+                            escuro:'#1A3A6B',
+                            claro: '#81ACEE',
+                            azul: '#3780EA',
+                            cinza: '#3A4E6B',
+                            escurin: '#2C64B8',
+                        }
+                    },
+                    keyframes: {
+                        wiggles: {
+                            '0%, 100%': { transform: 'rotate(-5deg) translate(-10px)' },
+                            '25%':{ transform: 'rotate(-7.5deg)'},
+                            '50%': { transform: 'rotate(5deg) translate(10px)'},
+                            '75%': {transform: 'rotate(7.5deg)'}
+                        }
+                    },
+                    animation: {
+                        wiggle: 'wiggles 1.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-screen bg-azul-claro flex flex-col items-center justify-center">
+    <div class="mb-10 pb-10">
+        <h1 id="titulo" class="md:text-6xl text-5xl font-mround text-azul-escuro animate-wiggle">Subtraia... me ;P</h1>
+    </div>
+    <div class="text-center items-center flex flex-col gap-10 w-1/2">
+        <div class="bg-white w-full rounded-full">
+            <h2 class="py-10 font-bold text-3xl" id='numero'></h2>
+        </div>
+        <div class="flex w-1/2 flex-col gap-5 md:justify-evenly md:flex-row md:w-full">
+            <button class="button w-full bg-white rounded-full py-3 px-5 font-bold hover:text-white hover:bg-azul-escuro duration-150" onclick='subtraia(1)'>-1</button>
+            <button class="button w-full bg-white rounded-full py-3 px-5 font-bold hover:text-white hover:bg-azul-escuro duration-150" onclick='subtraia(2)'>-2</button>
+            <button class="button w-full bg-white rounded-full py-3 px-5 font-bold hover:text-white hover:bg-azul-escuro duration-150" onclick='subtraia(3)'>-3</button>
+        </div>
+    </div>
+    <div class="flex flex-col text-center gap-2 items-center p-10 mt-5">
+        <p>Como funciona?</p>
+        <p>É um jogo de subtração e você está jogando contra um computador!</p>
+        <p>Ganha quem chegar a zero primeiro ;P</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
