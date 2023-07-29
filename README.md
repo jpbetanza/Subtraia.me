@@ -1,4 +1,4 @@
-# PrimeiroJogo
+# Subtraia.me
 
 Provavelmente o primeiro jogo que eu fiz na minha vida, usando HTML e Javascript
 Feito apenas por diversão após ver um amigo, jogando um jogo com uma mecânica matemática semelhante no celular dele.
