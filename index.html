@@ -28,10 +28,16 @@
                             '25%':{ transform: 'rotate(-7.5deg)'},
                             '50%': { transform: 'rotate(5deg) translate(10px)'},
                             '75%': {transform: 'rotate(7.5deg)'}
+                        },
+                        perdeus:{
+                            '0%,100%':{},
+                            '25%':{transform: 'translateX(-10px)'},
+                            '75%':{transform: 'translateX(10px)'},
                         }
                     },
                     animation: {
                         wiggle: 'wiggles 1.5s ease-in-out infinite',
+                        perdeu: 'perdeus 0.2s ease-in-out 3'
                     }
                 }
             }
@@ -39,11 +45,12 @@
     </script>
 </head>
 <body class="h-screen bg-azul-claro flex flex-col items-center justify-center">
+    <!-- <button class="absolute top-10 right-10 py-2 px-4 text-2xl bg-azul-escuro text-white rounded-lg">?</button> -->
     <div class="mt-10 mb-10 pb-10">
         <h1 id="titulo" class="md:text-6xl text-5xl font-mround text-azul-escuro animate-wiggle">Subtraia... me ;P</h1>
     </div>
     <div class="text-center items-center flex flex-col gap-10 w-3/4 md:w-1/2">
-        <div class="bg-white w-full rounded-full">
+        <div class="bg-white w-full rounded-[25px]" id="numero-block">
             <h2 class="py-10 font-bold text-3xl" id='numero'></h2>
         </div>
         <div class="flex w-1/2 flex-col gap-5 md:justify-evenly md:flex-row md:w-full">

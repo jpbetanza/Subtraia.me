@@ -38,6 +38,7 @@ function ganhou(){
 }
 function perdeu(){
 	document.getElementById("titulo").innerHTML='PERDEU HAHA ;P'
+	document.getElementById("numero-block").classList.add("animate-perdeu")
 }
 
 // Algorítmo do bot
@@ -52,18 +53,18 @@ async function enigma(){
 		a-=resto
 	}
 	document.getElementById('numero').innerHTML = a
-	document.getElementById(resto).classList.add("animate-ping");
+	document.getElementById(resto).classList.add("animate-[ping_.2s_ease-in-out_infinite]");
 
 	if(a==0){
 		await sleep(200)
 		perdeu()
-		document.getElementById(resto).classList.remove("animate-ping");
+		document.getElementById(resto).classList.remove("animate-[ping_.2s_ease-in-out_infinite]");
 		
 	}
 	else{
 		await sleep(200)
 		desabilitarbotoes(false)
-		document.getElementById(resto).classList.remove("animate-ping");
+		document.getElementById(resto).classList.remove("animate-[ping_.2s_ease-in-out_infinite]");
 	}
 }
 
@@ -72,12 +73,13 @@ async function subtraia(x){
 	desabilitarbotoes(true)
 	a = a-x
 	document.getElementById('numero').innerHTML = a
+	
 	pingTitle()
 	if(a==0){
 		ganhou()
 	}
 	else{
-		delay = Math.floor(Math.random() * (900 - 500) + 500)
+		delay = Math.floor(Math.random() * (1000 - 500) + 500)
 		await sleep(delay)
 		removePing()
 		enigma()
