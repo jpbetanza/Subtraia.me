@@ -1,7 +1,7 @@
 # Subtraia.me
 
-Provavelmente o primeiro jogo que eu fiz na minha vida, usando HTML e Javascript
-Feito apenas por diversão após ver um amigo, jogando um jogo com uma mecânica matemática semelhante no celular dele.
+Um jogo matemático, produzido usando conhecimentos em HTML, Javascript e CSS com o auxílio do framework Tailwind CSS.
+O objetivo do projeto era testar minhas habilidade de programação ao criar uma "cópia" de um jogo semelhante que um amigo meu jogou em seu celular no início da faculdade.
 
 ## Como abrir o jogo
 
@@ -15,4 +15,4 @@ Ganha aquele que subtrair à exatamente zero o valor apresentado na tela.
 
 ## Autor
 
-* **João Pedro Betanza Dal Caro** - *Fez tudo* - [jpbetanza](https://github.com/jpbetanza)
+* **João Pedro Betanza Dal Caro** - *Autor* - [jpbetanza](https://github.com/jpbetanza)
